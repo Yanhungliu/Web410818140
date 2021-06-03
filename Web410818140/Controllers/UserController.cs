@@ -20,24 +20,24 @@ namespace Web410818140.Controllers
         {
             if (data.Name.IsNullOrWhiteSpace())
             {
-                ViewBag.NameMessage = "請輸入姓名";
+                data.NameMessage = "請輸入姓名";
             }
 
             if (data.Account.IsNullOrWhiteSpace())
             {
-                ViewBag.AccountMessage = "請輸入帳號";
+                data.AccountMessage = "請輸入帳號";
             }
 
             if (data.Password.IsNullOrWhiteSpace())
             {
-                ViewBag.PasswordMessage = "請輸入密碼";
+                data.PasswordMessage = "請輸入密碼";
             }
             if (!data.Name.IsNullOrWhiteSpace()&& !data.Account.IsNullOrWhiteSpace()&& !data.Password.IsNullOrWhiteSpace())
             {
-                ViewBag.Message = "註冊成功";
+                data.Message = "註冊成功";
             }
 
-            return View();
+            return View(data);
         }
     }
 }
